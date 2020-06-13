@@ -19,7 +19,10 @@ class EncurtarUrlController {
             return res.status(404).json();
         }
 
-        return res.json({ newUrl: url.url_redirect });
+        /**
+         * TODO: Verificar a especificação rfc7231 https://tools.ietf.org/html/rfc7231#page-56
+         */
+        return res.status(307).redirect(url.url_redirect);
     }
 }
 
