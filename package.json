@@ -1,11 +1,29 @@
 {
-  "name": "encurtadorLinks",
+  "name": "encurtador_links",
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/julianosilva23/encurtadorLinks.git",
   "author": "Juliano Silva <julianoluizsilva00@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "pg": "^8.2.1",
+    "sequelize": "^5.21.12"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-prettier": "^3.1.3",
+    "nodemon": "^2.0.4",
+    "prettier": "^2.0.5",
+    "sequelize-cli": "^5.5.1",
+    "sucrase": "^3.15.0"
+  },
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "dev:debug": "nodemon --inspect src/server.js"
   }
 }
