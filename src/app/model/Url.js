@@ -4,12 +4,12 @@ class Url extends Model {
     static init(sequelize) {
         super.init(
             {
-                id: Sequelize.INTEGER,
-                url: Sequelize.STRING,
                 url_redirect: Sequelize.STRING,
+                code: Sequelize.STRING,
             },
             {
                 sequelize,
+                updatedAt: false,
             }
         );
     }

@@ -13,14 +13,14 @@
 
 module.exports = {
     up: (queryInterface, Sequelize) => {
-        return queryInterface.createTable('url', {
+        return queryInterface.createTable('urls', {
             id: {
                 type: Sequelize.INTEGER,
                 allowNull: false,
                 autoIncrement: true,
                 primaryKey: true,
             },
-            url: {
+            url_redirect: {
                 type: Sequelize.STRING(2048),
                 allowNull: false,
             },
@@ -36,6 +36,6 @@ module.exports = {
     },
 
     down: (queryInterface, Sequelize) => {
-        return queryInterface.dropTable('url');
+        return queryInterface.dropTable('urls');
     },
 };

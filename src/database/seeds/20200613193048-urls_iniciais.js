@@ -1,11 +1,11 @@
 module.exports = {
     up: (queryInterface, Sequelize) => {
         return queryInterface.bulkInsert(
-            'url',
+            'urls',
             [
                 {
-                    url: 'www.google.com',
-                    code: 'fdjfidj',
+                    url_redirect: 'www.google.com',
+                    code: 'abaofk124f',
                     created_at: new Date(),
                 },
             ],
