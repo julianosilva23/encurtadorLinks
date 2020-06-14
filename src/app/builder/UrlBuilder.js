@@ -1,13 +1,12 @@
+import shortId from 'shortid';
 import Url from '../model/Url';
 
 class UrlBuilder {
     async build(url) {
-        // code
-        const code = UrlBuilder.code(url);
+        const code = UrlBuilder.code();
 
-        // store
         return Url.create({
-            url,
+            url_redirect: url,
             code,
         });
     }
@@ -18,8 +17,12 @@ class UrlBuilder {
      *
      * Codifica a url
      */
-    static code(url) {
-        return url;
+    static code() {
+        shortId.characters(
+            '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZçã'
+        );
+
+        return shortId.generate();
     }
 }
 
