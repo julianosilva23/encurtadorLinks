@@ -6,7 +6,7 @@ module.exports = {
                 {
                     url_redirect: 'www.google.com',
                     code: 'abaofk124f',
-                    created_at: new Date(),
+                    createdAt: new Date(),
                 },
             ],
             {}

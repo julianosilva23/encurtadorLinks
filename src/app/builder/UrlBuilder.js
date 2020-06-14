@@ -1,14 +1,13 @@
 import shortId from 'shortid';
-import Url from '../model/Url';
 
 class UrlBuilder {
     async build(url) {
         const code = UrlBuilder.code();
 
-        return Url.create({
-            url_redirect: url,
+        return {
+            urlRedirect: url,
             code,
-        });
+        };
     }
 
     /**
@@ -22,7 +21,10 @@ class UrlBuilder {
             '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZçã'
         );
 
-        return shortId.generate();
+        /**
+         * possibilidade de colissão 64^10
+         */
+        return shortId.generate().substring(0, 10);
     }
 }
 

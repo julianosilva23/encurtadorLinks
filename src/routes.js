@@ -30,7 +30,7 @@ routes.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
  * path:
  *  /encurtador:
  *    post:
- *      summary: Gera uma url encurada a partir da enviada
+ *      summary: Gera uma url encurada a partir da url enviada
  *      parameters:
  *        - in: body
  *          name: user
@@ -55,7 +55,7 @@ routes.post('/encurtador', EncurtarUrlController.store);
  * path:
  *  /{code}:
  *    get:
- *      summary: Redirecionar para url a partir do código passado
+ *      summary: Redirecionar para url a partir do código enviado
  *      parameters:
  *        - in: path
  *          name: code
@@ -63,7 +63,7 @@ routes.post('/encurtador', EncurtarUrlController.store);
  *        "404":
  *          description: Código não existe ou expirou
  *        "307":
- *          description: Redirecionamento executado com sucesso
+ *          description: Redireciona o usuário para a url que foi encurtada
  */
 routes.get('/:code', EncurtarUrlController.get);
 
