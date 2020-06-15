@@ -28,7 +28,7 @@ class EncurtarUrlController {
 
         await Url.create(urlObject);
 
-        return res.json({ newUrl: `${process.env.APP_URL}/${urlObject.code}` });
+        return res.json({ newUrl: `${process.env.APP_URL}${urlObject.code}` });
     }
 
     async get(req, res) {
