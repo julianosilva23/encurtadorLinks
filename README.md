@@ -1,5 +1,7 @@
 # [Encurtador de URLs](https://encurtador-urls-teste.herokuapp.com) 
 
+API para encurtar links por um período de tempo determinado
+
 ![Coverage](https://github.com/julianosilva23/encurtadorLinks/blob/master/__tests__/badges/badget.svg)
 
 ![Coverage lines](https://github.com/julianosilva23/encurtadorLinks/blob/master/__tests__/badges/badge-lines.svg)
