@@ -26,7 +26,7 @@ docker run --name database -d -e POSTGRES_PASSWORD=mysecretpassword -e POSTGRES_
 ```
 
 - Crie um arquivo .env com base no .env.example
-- Preencha a variável de ambiente DB_PASS [mysecretpassword] e DB_NAME [my_db] com a variável inserida na execução do container docker[mysecretpassword]
+- Preencha a variável de ambiente DB_PASS [mysecretpassword] e DB_NAME [my_db] com a variável inserida na execução do container docker
 
 Execute o migrate no banco de dados
 ```shell
