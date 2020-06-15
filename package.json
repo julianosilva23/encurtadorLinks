@@ -31,6 +31,7 @@
     "eslint-plugin-jest": "^23.13.2",
     "eslint-plugin-prettier": "^3.1.3",
     "jest": "^26.0.1",
+    "jest-coverage-badges": "^1.1.2",
     "nodemon": "^2.0.4",
     "prettier": "^2.0.5",
     "sequelize-cli": "^5.5.1",
@@ -42,7 +43,7 @@
     "dev": "nodemon src/server.js",
     "dev:debug": "nodemon --inspect src/server.js",
     "pretest": "cross-env NODE_ENV=test sequelize db:migrate",
-    "test": "cross-env NODE_ENV=test jest",
+    "test": "cross-env NODE_ENV=test jest && yarn jest-coverage-badges --input ./__tests__/coverage/coverage-summary.json --output ./__tests__/badges",
     "posttest": "cross-env NODE_ENV=test sequelize db:migrate:undo:all",
     "build": "sucrase ./src -d ./dist --transforms imports",
     "start": "node dist/server.js"

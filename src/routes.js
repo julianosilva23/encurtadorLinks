@@ -67,4 +67,10 @@ routes.post('/encurtador', EncurtarUrlController.store);
  */
 routes.get('/:code', EncurtarUrlController.get);
 
+routes.get('/', (req, res) => {
+    res.json({
+        message: `Bem vindo a API para encurtar URLs, acessse a documentação para saber mais: ${process.env.APP_URL}api-docs`,
+    });
+});
+
 export default routes;
