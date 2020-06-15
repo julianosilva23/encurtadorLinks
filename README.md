@@ -26,7 +26,7 @@ docker run --name database -d -e POSTGRES_PASSWORD=mysecretpassword -e POSTGRES_
 ```
 
 - Crie um arquivo .env com base no .env.example
-- Preencha a variável de ambiente DB_PASS [mysecretpassword] e DB_NAME [my_db] com a variável inserida na execução do container docker
+- Preencha as variáveis de ambiente DB_PASS [mysecretpassword] e DB_NAME [my_db] com as informações inseridas na execução do container docker
 
 Execute o migrate no banco de dados
 ```shell
@@ -34,6 +34,8 @@ yarn sequelize db:migrate
 ```
 
 ## Testes
+
+- Preencha o arquivo .env.test com as variáveis de ambiente DB_PASS [mysecretpassword] e DB_NAME [my_db] com as informações inseridas na execução do container docker
 
 Para executar os testes, utilize o comando abaixo:
 
