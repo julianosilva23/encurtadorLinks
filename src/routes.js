@@ -69,7 +69,7 @@ routes.get('/:code', EncurtarUrlController.get);
 
 routes.get('/', (req, res) => {
     res.json({
-        message: `Bem vindo a API para encurtar URLs, acessse a documentação para saber mais: ${process.env.APP_URL}api-docs`,
+        message: `Bem vindo a API para encurtar URLs, acesse a documentação para saber mais: ${process.env.APP_URL}api-docs`,
     });
 });
 

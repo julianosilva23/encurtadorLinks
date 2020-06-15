@@ -51,5 +51,5 @@ yarn sequelize db:migrate && yarn build && yarn start
 ## Exemplo
 
 Você pode acessar os links do projeto por aqui: 
-- [Link da Api](https://encurtador-urls-teste.herokuapp.com/encurtador)
+- [Link da Api](https://encurtador-urls-teste.herokuapp.com)
 - [Documentação](https://encurtador-urls-teste.herokuapp.com/api-docs/)
