@@ -20,7 +20,7 @@ class EncurtarUrlController {
         } catch (_) {
             return res.status(400).json({
                 message:
-                    'Insira uma url válida, verifique se a url está no formato correto https://wisereducacao.com/',
+                    'Insira uma url válida, verifique se a url está no formato correto, exemplo: https://site.com/ ou http://site.com',
             });
         }
 
