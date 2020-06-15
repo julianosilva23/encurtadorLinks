@@ -1,4 +1,11 @@
-# [Encurtador de URLs] (https://encurtador-urls-teste.herokuapp.com) &middot; [![Coverage functions](https://github.com/julianosilva23/encurtadorLinks/blob/master/__tests__/badges/badge-functions.svg)]
+# [Encurtador de URLs] (https://encurtador-urls-teste.herokuapp.com) 
+
+![Coverage](https://github.com/julianosilva23/encurtadorLinks/blob/master/__tests__/badges/badge.svg)
+
+![Coverage lines](https://github.com/julianosilva23/encurtadorLinks/blob/master/__tests__/badges/badge-lines.svg)
+![Coverage functions](https://github.com/julianosilva23/encurtadorLinks/blob/master/__tests__/badges/badge-functions.svg)
+![Coverage branches](https://github.com/julianosilva23/encurtadorLinks/blob/master/__tests__/badges/badge-branches.svg)
+![Coverage statements](https://github.com/julianosilva23/encurtadorLinks/blob/master/__tests__/badges/badge-statements.svg)
 
 ## Começando
 
@@ -13,14 +20,13 @@ Para executar o projeto, será necessário instalar:
 Para iniciar o desenvolvimento, é necessário clonar o projeto do GitHub:
 
 ```shell
-cd "diretorio de sua preferencia"
 git clone https://github.com/julianosilva23/encurtadorLinks/
 yarn install
-docker run --name database -e POSTGRES_PASSWORD=mysecretpassword -d postgres
+docker run --name database -d -e POSTGRES_PASSWORD=mysecretpassword -e POSTGRES_DB=my_db -p 5432:5432 postgres
 ```
 
-Crie um arquivo .env com base no .env.example e substitua as variáveis de ambiente
- - adicione a senha informada na execução do container
+- Crie um arquivo .env com base no .env.example
+- Preencha a variável de ambiente DB_PASS com a variável inserida na execução do container docker: [mysecretpassword]
 
 Execute o migrate no banco de dados
 ```shell
@@ -37,10 +43,6 @@ yarn test
 
 ## Exemplo
 
-Você pode acessar o projeto por aqui: [Link da Api](https://encurtador-urls-teste.herokuapp.com/encurtador)
-
+Você pode acessar os links do projeto por aqui: 
+- [Link da Api](https://encurtador-urls-teste.herokuapp.com/encurtador)
 - [Documentação](https://encurtador-urls-teste.herokuapp.com/api-docs/)
-
-```
-yarn test
-```
